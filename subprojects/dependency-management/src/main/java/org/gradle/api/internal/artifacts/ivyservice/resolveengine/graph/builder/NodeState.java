@@ -194,6 +194,7 @@ class NodeState implements DependencyGraphNode {
             } else {
                 LOGGER.debug("{} has no incoming edges. ignoring.", this);
             }
+            visitOwners(discoveredEdges);
             return;
         }
 
